@@ -36,7 +36,7 @@ rm -rfv ${working_dir}
 
 mv "${working_dir}.deb" "${HERE}/instalador-de-fontes.deb"
 
-chmod 777 "${HERE}/instalador-de-codecs.deb"
-chmod -x  "${HERE}/instalador-de-codecs.deb"
+chmod 777 "${HERE}/instalador-de-fontes.deb"
+chmod -x  "${HERE}/instalador-de-fontes.deb"
 
 
