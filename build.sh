@@ -17,7 +17,7 @@ mkdir -p "${working_dir}/usr/tiger_tools/"            \
          "${working_dir}/DEBIAN"
 
 cp "${HERE}/src/font-installer.sh"    "${working_dir}/usr/tiger_tools/font-installer.sh"
-cp "${HERE}/src/launcher.desktop"     "${working_dir}/usr/share/applications/font-installer.dektop"
+cp "${HERE}/src/launcher.desktop"     "${working_dir}/usr/share/applications/font-installer.desktop"
 
 chmod a+x "${working_dir}/usr/tiger_tools/font-installer.sh"
 
@@ -34,7 +34,7 @@ chmod a+x "${working_dir}/usr/tiger_tools/font-installer.sh"
 dpkg -b ${working_dir}
 rm -rfv ${working_dir}
 
-mv "${working_dir}.deb" "${HERE}/instalador-de-codecs.deb"
+mv "${working_dir}.deb" "${HERE}/instalador-de-fontes.deb"
 
 chmod 777 "${HERE}/instalador-de-codecs.deb"
 chmod -x  "${HERE}/instalador-de-codecs.deb"
