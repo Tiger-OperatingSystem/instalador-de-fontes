@@ -26,7 +26,7 @@ chmod a+x "${working_dir}/usr/tiger_tools/font-installer.sh"
  echo "Version: 1.0"
  echo "Architecture: all"
  echo "Maintainer: Natanael Barbosa Santos"
- echo "Depends: yad"
+ echo "Depends: yad, imagemagick"
  echo "Description: $(cat ${HERE}/README.md  | sed -n '1p')"
  echo
 ) > "${working_dir}/DEBIAN/control"
