@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=/usr/tiger_tools/font-installer.sh %F
+Exec=/usr/bin/font-installer-gui %F
 Name=Instalar fonte
 X-KDE-StartupNotify=true
 Icon=font-ttf
