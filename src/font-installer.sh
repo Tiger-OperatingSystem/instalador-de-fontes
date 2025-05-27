@@ -22,6 +22,13 @@ font_family=$(echo "${data}"  | grep "^f:" | cut -c 3- | head -n 1)
 font_type=$(echo "${data}"    | grep "^t:" | cut -c 3- | head -n 1)
 font_foundry=$(echo "${data}" | grep "^d:" | cut -c 3- | head -n 1)
 
+if fc-list | grep -qi "${font_family}.*${font_style}"; then
+  yad --center --borders=32 --width=480 --title="Fonte já instalada" \
+    --window-icon=font-ttf --button=Cancelar:1 --button="Continuar":0 --fixed \
+    --text="A fonte <b>${font_name}</b> (${font_style}) já está instalada no sistema.\n\nDeseja reinstalá-la?"
+  [ $? -ne 0 ] && exit 0
+fi
+
 preview_file=$(mktemp --suffix=.png)
 convert -size 736x240 -background white -font "${font_file}" -pointsize 64 -fill black -gravity center caption:"The quick brown fox jumps over the lazy dog" -flatten "${preview_file}"
 
