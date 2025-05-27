@@ -23,9 +23,10 @@ chmod a+x "${working_dir}/usr/bin/font-installer-gui"
 
 (echo "Package: instalador-de-fontes"
  echo "Priority: optional"
- echo "Version: 1.0"
+ echo "Version: 1.1"
  echo "Architecture: all"
  echo "Maintainer: Natanael Barbosa Santos"
+ echo "Uploaders: Charles Santana <charlesstna@proton.me>"
  echo "Depends: yad, imagemagick"
  echo "Description: $(cat ${HERE}/README.md  | sed -n '1p')"
  echo
